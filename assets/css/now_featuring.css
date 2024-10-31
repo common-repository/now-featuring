@@ -1,0 +1,266 @@
+.nf_single {} .nf_list {} .nf_list_item {
+    margin: 15px 0;
+}
+.nf_list_header {
+    margin: 2px 0;
+}
+.nf_list_item img {
+    float: left;
+    margin: 0 5px 0 0;
+}
+.nf_title {
+    font-size: 16px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 5px;
+}
+.clear {
+    clear: both;
+}
+/*
+ * Modded by: Brahmina, from:
+ * 
+ * jQuery FlexSlider v2.5.0 from WooThemes
+ * http://www.woothemes.com/flexslider/
+ *
+ * Free to use under the GPLv2 and later license.
+ * 
+ */
+/* ====================================================================================================================
+ * RESETS
+ * ====================================================================================================================*/
+
+.nf_flex_container a:hover,
+.nf_flex_slider a:hover,
+.nf_flex_container a:focus,
+.nf_flex_slider a:focus {
+    outline: none;
+}
+.slides,
+.slides > li,
+.nf_flex_control_nav,
+.nf_flex_direction_nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nf_flex_pauseplay span {
+    text-transform: capitalize;
+}
+/* ====================================================================================================================
+ * BASE STYLES
+ * ====================================================================================================================*/
+
+.nf_flexslider {
+    margin: 0;
+    padding: 0;
+}
+.nf_flexslider .slides > li {
+    display: none;
+    -webkit-backface-visibility: hidden;
+}
+.nf_flexslider .slides img {
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+}
+
+html[xmlns] .nf_flexslider .slides {
+    display: block;
+}
+* html .nf_flexslider .slides {
+    height: 1%;
+}
+.no-js .nf_flexslider .slides > li:first-child {
+    display: block;
+}
+/* ====================================================================================================================
+ * DEFAULT THEME
+ * ====================================================================================================================*/
+
+.nf_flexslider {
+    background: #ffffff;
+    border: 4px solid #ffffff;
+    position: relative;
+}
+.nf_flexslider .slides {} .nf_flexslider .slides img {
+    height: auto;
+}
+.nf_flex_viewport {
+    max-height: 2000px;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.loading .nf_flex_viewport {
+    max-height: 300px;
+}
+.carousel li {
+    margin-right: 5px;
+}
+.nf_flex_direction_nav {
+    height: 0;
+}
+.nf_flex_direction_nav a {
+    text-decoration: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0;
+    position: absolute;
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.nf_flex_direction_nav .nf_flex_prev {
+    left: -50px;
+    font-size: 60px;
+    font-family: OCR A Std;
+    font-weight: bold;
+}
+.nf_flex_direction_nav .nf_flex_next {
+    right: -50px;
+    text-align: right;
+    font-size: 60px;
+    font-family: OCR A Std;
+    font-weight: bold;
+}
+.nf_flexslider:hover .nf_flex_direction_nav .nf_flex_prev {
+    opacity: 0.7;
+    left: 10px;
+}
+.nf_flexslider:hover .nf_flex_direction_nav .nf_flex_prev:hover {
+    opacity: 1;
+}
+.nf_flexslider:hover .nf_flex_direction_nav .nf_flex_next {
+    opacity: 0.7;
+    right: 10px;
+}
+.nf_flexslider:hover .nf_flex_direction_nav .nf_flex_next:hover {
+    opacity: 1;
+}
+.nf_flex_direction_nav .nf_flex_disabled {
+    opacity: 0!important;
+    filter: alpha(opacity=0);
+    cursor: default;
+}
+.nf_flex_pauseplay a {
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    opacity: 0.8;
+    z-index: 10;
+    overflow: hidden;
+    cursor: pointer;
+    color: #000;
+}
+.nf_flex_pauseplay a:hover {
+    opacity: 1;
+}
+.nf_flex_control_nav {
+    width: 100%;
+    position: absolute;
+    bottom: -40px;
+    text-align: center;
+}
+.nf_flex_control_nav li {
+    margin: 0 6px;
+    display: inline-block;
+    *display: inline;
+}
+.nf_flex_control_paging li a {
+    width: 11px;
+    height: 11px;
+    display: block;
+    background: #666;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    text-indent: -9999px;
+    -webkit-box_shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -o-box_shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    box_shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+.nf_flex_control_paging li a:hover {
+    background: #333;
+    background: rgba(0, 0, 0, 0.7);
+}
+.nf_flex_control_paging li a.nf_flex_active {
+    background: #000;
+    background: rgba(0, 0, 0, 0.9);
+    cursor: default;
+}
+.nf_flex_control_thumbs {
+    margin: 5px 0 0;
+    position: static;
+    overflow: hidden;
+}
+.nf_flex_control_thumbs li {
+    width: 25%;
+    float: left;
+    margin: 0;
+}
+.nf_flex_control_thumbs img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: .7;
+    cursor: pointer;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.nf_flex_control_thumbs img:hover {
+    opacity: 1;
+}
+.nf_flex_control_thumbs .nf_flex_active {
+    opacity: 1;
+    cursor: default;
+}
+.nf_flexslider .slides {
+    padding: 0;
+}
+.nf_flex_header {
+    left: 0;
+    top: 0;
+    text-align: center;
+}
+.nf_flex_caption {
+    padding: 2%;
+    left: 0;
+    bottom: 0;
+}
+.nf_flexslider {
+    border: none;
+    max-height: 500px;
+    overflow: hidden;
+}
+/* ====================================================================================================================
+ * RESPONSIVE
+ * ====================================================================================================================*/
+
+@media screen and (max-width: 860px) {
+    .nf_flex_direction_nav .nf_flex_prev {
+        opacity: 1;
+        left: 10px;
+    }
+    .nf_flex_direction_nav .nf_flex_next {
+        opacity: 1;
+        right: 10px;
+    }
+}

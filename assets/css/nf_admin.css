@@ -1,0 +1,11 @@
+.nf_widget_fields{
+    display: initial;   
+}
+.nf_widget_fields_hidden{
+    display: none;
+}
+.nf_ajax_loader{
+    position: relative;
+    top: 10px;
+    left: 5px;
+}
